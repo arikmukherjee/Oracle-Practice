@@ -1,0 +1,11 @@
+create table student(roll number,name varchar2(10),address varchar2(50));
+insert into student values(2,'jaggu','goa');
+insert into student values(1,'chutki','u.p');
+insert into student values(5,'bheem','m.p');
+select *
+from student;
+select name
+from student;
+select name,address
+from student;
+drop table student;
