@@ -1,0 +1,67 @@
+create table EMP(eid number, ename varchar2(20),age number,salary number,company varchar2(60));
+insert into EMP values (1,'raju',30,30000,'TCS');
+insert into EMP values (2,'indu',35,40000,'IBM');
+insert into EMP values (3,'kalia',40,50000,'CTS');
+select *
+from EMP;
+drop table EMP;
+
+select * 
+from EMP
+where company='TCS';
+
+select ename 
+from EMP
+where salary>=40000;
+
+select ename 
+from EMP
+where age<=35 and salary>=40000;
+
+select ename 
+from EMP
+where age<=35 or salary>=40000;
+
+select min(salary)
+from EMP;
+
+select min(salary) as minimum_salary
+from EMP;
+
+select max(salary)
+from EMP;
+
+select max(salary) as maximum_salary
+from EMP;
+
+select avg(salary)
+from EMP;
+
+select avg(salary) as average_salary
+from EMP;
+
+select ename
+from EMP
+where salary=(select max(salary)
+                from EMP);
+
+select ename
+from EMP
+where salary=(select min(salary)
+                from EMP);
+
+select ename
+from EMP
+where salary>=(select avg(salary)
+                from EMP);
+
+select ename
+from EMP
+where age=(select max(age)
+                from EMP);
+
+select ename
+from EMP
+where salary>(select salary
+                from EMP
+                where ename='raju');
