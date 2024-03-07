@@ -1,0 +1,34 @@
+select sysdate from dual;
+select to_char(sysdate,'yyyy') from dual;
+select to_char(sysdate,'yyy') from dual;
+select to_char(sysdate,'yy') from dual;
+select to_char(sysdate,'mm') from dual;
+select to_char(sysdate,'mon') from dual;
+select to_char(sysdate,'month') from dual;
+select to_char(sysdate,'q') from dual;
+select to_char(sysdate,'rm') from dual;
+select to_char(sysdate,'dd') from dual;
+select to_char(sysdate,'ddd') from dual;
+select to_char(sysdate,'d') from dual;
+select to_char(sysdate,'day') from dual;
+select to_char(sysdate,'dy') from dual;
+select to_char(sysdate,'hh') from dual;
+select to_char(sysdate,'hh24') from dual;
+select to_char(sysdate,'mi') from dual;
+select to_char(sysdate,'ss') from dual;
+select to_char(sysdate,'dd/mm/yy') from dual;
+select to_char(sysdate,'dd-mm-yy') from dual;
+
+create table EMP1(eid number,ename varchar2(10),dob date);
+desc EMP1;
+insert into EMP1 values(7,'dhoni','07-JUL-1981');
+select * from EMP1;
+insert into EMP1 values(99,'sourav','08-JUL-1972');
+insert into EMP1 values(45,'jyotibasu','08-JUL-1914');
+select * from EMP1;
+
+select ename,to_char(dob,'yyyy') from EMP1;
+select ename,to_char(dob,'dd/mm/yy') from EMP1;
+
+insert into EMP1 values(1,'arik',to_date('15/11/2003','dd/mm/yyyy'));
+insert into EMP1 values(2,'pranjali',to_date('13/12/2003','dd/mm/yyyy'));

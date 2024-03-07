@@ -1,0 +1,12 @@
+update EMP set company='TCS'
+where eid=1;
+select * from EMP;
+update EMP set company='IBM'
+where eid=2;
+select * from EMP;
+update EMP set company='CTS'
+where eid=3;
+select * from EMP;
+
+update EMP set age=age+1;
+select * from EMP;
